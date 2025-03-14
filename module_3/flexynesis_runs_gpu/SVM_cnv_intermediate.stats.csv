@@ -1,0 +1,4 @@
+method,var,variable_type,metric,value
+SVMRegressor,Erlotinib,numerical,mse,0.00531148088950285
+SVMRegressor,Erlotinib,numerical,r2,0.04194523468184164
+SVMRegressor,Erlotinib,numerical,pearson_corr,0.2048053580398756

@@ -1,0 +1,4 @@
+method,var,variable_type,metric,value
+RandomForestRegressor,Erlotinib,numerical,mse,0.0036745435753735775
+RandomForestRegressor,Erlotinib,numerical,r2,0.1451995094374463
+RandomForestRegressor,Erlotinib,numerical,pearson_corr,0.3810505339681947

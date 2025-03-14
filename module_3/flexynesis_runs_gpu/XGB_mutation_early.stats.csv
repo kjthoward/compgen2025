@@ -1,0 +1,4 @@
+method,var,variable_type,metric,value
+XGBoostRegressor,Erlotinib,numerical,mse,0.004161348114139579
+XGBoostRegressor,Erlotinib,numerical,r2,0.009396327792707196
+XGBoostRegressor,Erlotinib,numerical,pearson_corr,0.09693465733527507

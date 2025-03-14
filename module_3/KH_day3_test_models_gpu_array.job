@@ -1,0 +1,34 @@
+#!/bin/sh
+#SBATCH --partition=gpu
+#SBATCH --time=3-00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=32G
+#SBATCH --gres=gpu:1
+#SBATCH --job-name=flexynesis_gpu
+#SBATCH --error=./gpu_logs/%x-%A_%a.err	# redirect stderr to this file
+#SBATCH --output=./gpu_logs/%x-%A_%a.out	# redirect stdout to this file
+#SBATCH --array=1-70
+#SBATCH --mail-user=Howardkj1@Cardiff.ac.uk	# email address used for event notification
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end		# email on job end
+#SBATCH --mail-type=fail	# email on job failure
+
+source /mnt/scratch45/nodelete/c24080990/miniconda3/etc/profile.d/conda.sh
+
+conda activate flexenv
+cd /mnt/scratch45/c24080990/compgen2025/module_3/compgen_w3
+ulimit -n 8192
+config="/mnt/scratch45/c24080990/compgen2025/module_3/compgen_w3/flex_conf.tsv"
+class=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $2}' $config)
+data_type=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $3}' $config)
+fusion_type=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $4}' $config)
+prefix=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $5}' $config)
+
+flexynesis --data_path ./ccle_vs_gdsc/ --target_variables Erlotinib \
+    --hpo_iter 100 --features_top_percentile 10 --outdir ./flexynesis_runs_gpu \
+    --model_class ${class} \
+    --data_types ${data_type} \
+    --fusion_type ${fusion_type} \
+    --prefix ${prefix} \
+    --use_gpu 

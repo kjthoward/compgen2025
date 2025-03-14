@@ -1,0 +1,4 @@
+method,var,variable_type,metric,value
+supervised_vae,Erlotinib,numerical,mse,0.006314982194453478
+supervised_vae,Erlotinib,numerical,r2,0.13992490627413834
+supervised_vae,Erlotinib,numerical,pearson_corr,0.3740653770053282

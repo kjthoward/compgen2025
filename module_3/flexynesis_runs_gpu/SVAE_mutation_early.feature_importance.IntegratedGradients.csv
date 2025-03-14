@@ -1,0 +1,17 @@
+target_variable,target_class,target_class_label,layer,name,importance,explainer
+Erlotinib,0,,all,KRAS,0.0033287891407032576,IntegratedGradients
+Erlotinib,0,,all,MSH6,0.0063142551595830165,IntegratedGradients
+Erlotinib,0,,all,APC,0.004166053367670402,IntegratedGradients
+Erlotinib,0,,all,BRAF,0.00507452806059424,IntegratedGradients
+Erlotinib,0,,all,TP53,0.0013875145904698185,IntegratedGradients
+Erlotinib,0,,all,CDKN2A,0.0033973344701561537,IntegratedGradients
+Erlotinib,0,,all,NF1,0.0047373093848834796,IntegratedGradients
+Erlotinib,0,,all,TSC1,0.0007502045620338264,IntegratedGradients
+Erlotinib,0,,all,BRCA2,0.00405910867119462,IntegratedGradients
+Erlotinib,0,,all,SMARCA4,0.004450777370892646,IntegratedGradients
+Erlotinib,0,,all,GNAS,0.0021792083395656145,IntegratedGradients
+Erlotinib,0,,all,KDM6A,0.00344152458843763,IntegratedGradients
+Erlotinib,0,,all,FBXW7,0.002126822493954093,IntegratedGradients
+Erlotinib,0,,all,PIK3R1,0.0018919065268964022,IntegratedGradients
+Erlotinib,0,,all,TET2,0.0014151557752504,IntegratedGradients
+Erlotinib,0,,all,PTEN,0.0022462745977528636,IntegratedGradients
