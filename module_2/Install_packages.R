@@ -1,0 +1,17 @@
+if (!require("devtools", quietly = TRUE))
+  install.packages("devtools")
+devtools::install_github("BIMSBbioinfo/VoltRon")
+
+BiocManager::install("rhdf5",force = TRUE, lib=.libPaths()[1])
+install.packages("Seurat")
+devtools::install_github("dmcable/spacexr")
+BiocManager::install("ComplexHeatmap",lib=.libPaths()[1])
+BiocManager::install("HDF5Array",lib=.libPaths()[1])
+devtools::install_github("BIMSBbioinfo/ImageArray")
+devtools::install_github("bnprks/BPCells/r@v0.3.0")
+devtools::install_github("vitessce/vitessceR")
+BiocManager::install("basilisk",lib=.libPaths()[1])
+install.packages("ggnewscale")
+devtools::install_github('immunogenomics/presto')
+
+BiocManager::install("RBioFormats",lib=.libPaths()[1])
