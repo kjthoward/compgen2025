@@ -1,1 +1,7 @@
-.ipynb_checkpoints/*
+**/.ipynb_checkpoints/
+*.Rproj*
+*.DS_Store
+module_2/workshop/data/
+module_3/brca_metabric_processed/
+module_3/ccle_vs_gdsc/
+module_3/lgggbm_tcga_pub_processed/
